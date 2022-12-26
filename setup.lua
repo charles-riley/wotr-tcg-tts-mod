@@ -1,15 +1,15 @@
 -- decks
-promo = getObjectFromGUID("904dae")
-southron = getObjectFromGUID("fbb387")
-mordor = getObjectFromGUID("c8822f")
-monstrous = getObjectFromGUID("a8d311")
-isengard = getObjectFromGUID("9214fc")
-dunedain = getObjectFromGUID("9dcae2")
-dwarf = getObjectFromGUID("312d34")
-elf = getObjectFromGUID("a4588d")
-hobbit = getObjectFromGUID("662854")
-rohan = getObjectFromGUID("27c5b8")
-wizard = getObjectFromGUID("ff20a6")
+promo = getObjectFromGUID("ca1c89")
+southron = getObjectFromGUID("de4160")
+mordor = getObjectFromGUID("d65d92")
+monstrous = getObjectFromGUID("09fdaf")
+isengard = getObjectFromGUID("35d66b")
+dunedain = getObjectFromGUID("97410e")
+dwarf = getObjectFromGUID("fd4a10")
+elf = getObjectFromGUID("fdd6df")
+hobbit = getObjectFromGUID("f80dcd")
+rohan = getObjectFromGUID("b3b90d")
+wizard = getObjectFromGUID("07521f")
 shadow_battlegrounds = getObjectFromGUID("a5c0cc")
 free_peoples_battlegrounds = getObjectFromGUID("4901f5")
 path1 = getObjectFromGUID("67ee66")
@@ -27,7 +27,7 @@ shadow_helper = getObjectFromGUID("23c333")
 free_peoples_helper = getObjectFromGUID("05f876")
 turn_tracker = getObjectFromGUID("56494f")
 turn_tracker_token = getObjectFromGUID("7e74fe")
-first_player_token = getObjectFromGUID("32fc28")
+first_player_token = getObjectFromGUID("fbb784")
 -- paths
 -- 6
 amon_hen_card_guid = "669e8b"
@@ -51,80 +51,80 @@ minas_morgul_card_guid = "8fbfd0"
 orthanc_card_guid = "8a4b2e"
 morannon_card_guid = "6517fe"
 -- dunedain
-blade_of_westernesse_card_guid = "8f41c3"
-boromir_card_guid = "f21a5b"
-strider_card_guid =  "85ea72"
+blade_of_westernesse_card_guid = "0ce7a3"
+boromir_card_guid = "d53878"
+strider_card_guid =  "9d2ed6"
 -- hobbit
-bilbo_card_guid = "55bc78"
-sting_card_guid = "786be7"
-there_is_another_way_card_guid = "02c180"
-mithril_coat_card_guid = "7ee22c"
-herbs_and_stewed_rabbit_card_guid = "38aabf"
-sam_gamgee_card_guid = "73ff82"
-bilbo_baggins_card_guid = "55bc78"
-fatty_bolger_card_guid = "157ad7"
-merry_brandybuck_card_guid = "55edec"
-frodo_baggins_card_guid = "600234"
-pippin_took_card_guid = "4df50b"
+bilbo_card_guid = "7d9ade"
+sting_card_guid = "c79b25"
+there_is_another_way_card_guid = "25336e"
+mithril_coat_card_guid = "9cf4d5"
+herbs_and_stewed_rabbit_card_guid = "79dfe6"
+sam_gamgee_card_guid = "6abc42"
+bilbo_baggins_card_guid = "7d9ade"
+fatty_bolger_card_guid = "c1189b"
+merry_brandybuck_card_guid = "6e3c7d"
+frodo_baggins_card_guid = "ebabb4"
+pippin_took_card_guid = "613ff3"
 -- wizard
-gandalf_the_gray_card_guid = "a0b875"
-narya_card_guid = "17c3fa"
-gandalfs_staff_card_guid = "bcc18c"
-glamdring_card_guid = "a850bc"
-treebeard_card_guid = "57b48a"
-quickbeam_card_guid = "850b55"
-gwaihir_card_guid = "5034c5"
-ent_draught_card_guid = "3f9aea"
-gandalf_the_white_card_guid = "93a4db"
-smeagol_card_guid = "8550fc"
+gandalf_the_gray_card_guid = "f96e97"
+narya_card_guid = "8b35f8"
+gandalfs_staff_card_guid = "11b782"
+glamdring_card_guid = "b6b21f"
+treebeard_card_guid = "64a479"
+quickbeam_card_guid = "8ccf08"
+gwaihir_card_guid = "f18828"
+ent_draught_card_guid = "0f0e9e"
+gandalf_the_white_card_guid = "ff002b"
+smeagol_card_guid = "cb0f18"
 -- monstrous
-flocks_of_crebain_card_guid = "a44a17"
-gollum_card_guid = "af3b05"
-hill_troll_card_guid = "78a7df"
-candles_of_corpses_card_guid = "6d7cae"
-shelob_card_guid = "c0ffbe"
-balrog_of_moria_guid = "398558"
-goblins_of_the_misty_mountain_1_card_guid = "d90138"
-goblins_of_the_misty_mountain_2_card_guid = "96f44d"
-cave_troll_card_guid = "4e1fde"
-barrow_wights_card_guid = "3216df"
-caradhras_the_cruel_card_guid = "82f698"
+flocks_of_crebain_card_guid = "0e0b9d"
+gollum_card_guid = "2a38e3"
+hill_troll_card_guid = "ba9c77"
+candles_of_corpses_card_guid = "9e1141"
+shelob_card_guid = "7f2fee"
+balrog_of_moria_guid = "ba64b8"
+goblins_of_the_misty_mountain_1_card_guid = "86afd9"
+goblins_of_the_misty_mountain_2_card_guid = "dca8fc"
+cave_troll_card_guid = "e39344"
+barrow_wights_card_guid = "e7eadb"
+caradhras_the_cruel_card_guid = "0fb191"
 -- isengard
-saruman_card_guid = "3f77d0"
-palantir_of_orthanc_card_guid = "fce6c0"
-ugluk_card_guid = "fc452e"
-sarumans_staff_card_guid = "884f8b"
+saruman_card_guid = "922758"
+palantir_of_orthanc_card_guid = "4d678e"
+ugluk_card_guid = "ceb05c"
+sarumans_staff_card_guid = "5f38e3"
 -- mordor
-the_hunter_card_guid = "188841"
-the_messenger_card_guid = "a3963a"
-the_black_captain_card_guid = "ddcdc8"
-the_beguiler_card_guid = "07d0e7"
-the_destroyer_card_guid = "60555b"
-the_warrior_card_guid = "aed81b"
-the_reaver_card_guid = "b506d9"
-the_witch_king_card_guid = "e77b97"
-the_commander_card_guid = "e03abd"
-the_lidless_eye_card_guid = "49920a"
-morgul_blade_card_guid = "56c214"
-mordor_orcs_1_card_guid = "bc1b07"
-mordor_orcs_2_card_guid = "d2d0cc"
-mordor_orcs_3_card_guid = "625487"
-mordor_orcs_4_card_guid = "07111a"
-mordor_orcs_5_card_guid = "389cc6"
-black_uruks_card_guid = "00f3f2"
-the_ringwraiths_are_abroad_card_guid = "dd545c"
-the_day_without_dawn_card_guid = "76a646"
-mouth_of_sauron_card_guid = "d461c9"
-trolls_of_udun_guid = "389159"
-the_black_esterling_card_guid = "5af82c"
-grond_card_guid = "fe36db"
-black_breath_card_guid = "0c2759"
-olog_hai_card_guid = "123032"
-nazguls_mantle_card_guid = "b71359"
-gorbag_and_shagrat_card_guid = "314b5a"
-black_riders_mount_card_guid = "1ff1de"
-fell_beast_card_guid = "e648b8"
-grishnakh_card_guid = "f039e0"
+the_hunter_card_guid = "822122"
+the_messenger_card_guid = "d98002"
+the_black_captain_card_guid = "688cc9"
+the_beguiler_card_guid = "6d35a8"
+the_destroyer_card_guid = "b12e43"
+the_warrior_card_guid = "af6e59"
+the_reaver_card_guid = "2da396"
+the_witch_king_card_guid = "0ff6d4"
+the_commander_card_guid = "55f802"
+the_lidless_eye_card_guid = "3c6566"
+morgul_blade_card_guid = "de89b2"
+mordor_orcs_1_card_guid = "47d045"
+mordor_orcs_2_card_guid = "3978ac"
+mordor_orcs_3_card_guid = "5a95dc"
+mordor_orcs_4_card_guid = "0cf0dd"
+mordor_orcs_5_card_guid = "df6d1e"
+black_uruks_card_guid = "f3c38a"
+the_ringwraiths_are_abroad_card_guid = "520f24"
+the_day_without_dawn_card_guid = "1f17eb"
+mouth_of_sauron_card_guid = "4dcabf"
+trolls_of_udun_guid = "8d24a4"
+the_black_esterling_card_guid = "fa96d8"
+grond_card_guid = "49e63c"
+black_breath_card_guid = "232383"
+olog_hai_card_guid = "540933"
+nazguls_mantle_card_guid = "9036e7"
+gorbag_and_shagrat_card_guid = "47e86d"
+black_riders_mount_card_guid = "096f7e"
+fell_beast_card_guid = "201221"
+grishnakh_card_guid = "14fdfc"
 -- wizard
 
 
@@ -138,26 +138,26 @@ frodo_ring = getObjectFromGUID("076e4f")
 trash = getObjectFromGUID("c01b96")
 
 -- positions
-yellow_exiled = Vector(-32.064629, 0.973605, -20.743591)
-yellow_draw = Vector(-22.148804, 0.973605, -20.757271)
-yellow_cycled = Vector(-11.9866, 0.973605, -20.703468)
-brown_exiled = Vector(10.853039, 0.973605, -20.804123)
-brown_draw = Vector(21.200584, 0.973605, -20.750433)
-brown_cycled = Vector(31.757725, 0.973605, -20.765505)
-blue_exiled = Vector(31.916193, 0.973605, 20.758022)
-blue_draw = Vector(21.394684, 0.973605, 20.772974)
-blue_cycled = Vector(11.280308, 0.973605, 20.787186)
-teal_exiled = Vector(-11.457415, 0.973605, 20.819462)
-teal_draw = Vector(-21.845392, 0.973605, 20.834047)
-teal_cycled = Vector(-32.10688, 0.973605, 20.84865)
+yellow_exiled = {-30.00, 0.97, -32.00}
+yellow_draw = {-24.00, 0.97, -32.00}
+yellow_cycled = {-18.00, 0.97, -32.00}
+brown_exiled = {18.00, 0.97, -32.00}
+brown_draw = {24.00, 0.97, -32.00}
+brown_cycled = {30.00, 0.97, -32.00}
+blue_exiled = {30.00, 0.97, 32.00}
+blue_draw = {24.00, 0.97, 32.00}
+blue_cycled = {18.00, 0.97, 32.00}
+teal_exiled = {-18.00, 0.97, 32.00}
+teal_draw = {-24.00, 0.97, 32.00}
+teal_cycled = {-30.00, 1.02, 32.00}
 --shadow_helper_pos = Vector(0, 0.974822, -32)
 shadow_helper_pos = Vector(0, 3.76, -32)
 free_peoples_helper_pos = Vector(0, 0.974822, 31.999998)
 path_pos = Vector(50, 0.99659, 0)
-witch_king_ring_pos = Vector(24, 0.96, -28)
-saruman_ring_pos = Vector(-24, 0.96, -28)
-frodo_ring_pos = Vector(-24, 0.96, 28)
-aragorn_ring_pos = Vector(24, 0.96, 28)
+witch_king_ring_pos = {14.00, 0.96, -22.00}
+saruman_ring_pos = {-14.00, 0.96, -22.00}
+frodo_ring_pos = {-14.00, 0.96, 22.00}
+aragorn_ring_pos = {12.00, 0.96, 22.00}
 turn_tracker_token_pos = Vector(-52, 10, 2)
 fellowship_battlegrounds_pos = Vector(50, 1.14, 4)
 fellowship_path_pos = Vector(50, 1.14, -4)
@@ -187,13 +187,6 @@ function setUpGame()
     if scenario == "Fellowship" then set_up_fellowship() end
     
     destroyObject(self)
-end
-
-function set_up_promo()
-    mordor.putObject(promo.takeObject())
-    monstrous.putObject(promo.takeObject())
-    rohan.putObject(promo.takeObject())
-    dunedain.putObject(promo.takeObject())
 end
 
 function set_up_trilogy()
@@ -249,12 +242,14 @@ function set_up_trilogy()
     -- aragorn
     dunedain.setPosition(blue_draw)
     dunedain.setRotation(Vector(0,0,180))
+    elf.setPosition(blue_draw)
+    elf.setRotation(Vector(0,0,180))
     for i = 1, 9 do
         dunedain.putObject(elf.takeObject())
     end
     if include_promo == "true" then dunedain.putObject(promo.takeObject()) else trash.putObject(promo.takeObject()) end   
     dunedain.randomize()
-    dunedain.deal(7, "Blue")
+    dunedain.deal(7, "Green")
     aragorn_ring.setPosition(aragorn_ring_pos)
 
     -- free peoples helper
@@ -266,32 +261,40 @@ function set_up_trilogy()
 
     -- paths
     path9.randomize()
+    path9.setPosition(Vector(-50, 1 ,0))
     path9.setPosition(path_pos)
     path8.randomize()
+    path8.setPosition(Vector(-50, 1 ,0))
     for i = 1, 3 do
         path8.takeObject({ position = path_pos + Vector(0, 1, 0), smooth = true })
     end
     path7.randomize()
+    path7.setPosition(Vector(-50, 1 ,0))
     for i = 1, 3 do 
         path7.takeObject({ position = path_pos + Vector(0, 2, 0), smooth = true })
     end
     path6.randomize()
+    path6.setPosition(Vector(-50, 1 ,0))
     for i = 1, 3 do 
         path6.takeObject({ position = path_pos + Vector(0, 3, 0), smooth = true })
     end
     path5.randomize()
+    path5.setPosition(Vector(-50, 1 ,0))
     for i = 1, 3 do 
         path5.takeObject({ position = path_pos + Vector(0, 4, 0), smooth = true })
     end
     path4.randomize()
+    path4.setPosition(Vector(-50, 1 ,0))
     for i = 1, 3 do 
         path4.takeObject({ position = path_pos + Vector(0, 5, 0), smooth = true })
     end
     path3.randomize()
+    path3.setPosition(Vector(-50, 1 ,0))
     for i = 1, 3 do 
         path3.takeObject({ position = path_pos + Vector(0, 6, 0), smooth = true })
     end
     path2.randomize()
+    path2.setPosition(Vector(-50, 1 ,0))
     for i = 1, 3 do 
         path2.takeObject({ position = path_pos + Vector(0, 7, 0), smooth = true })
     end
@@ -333,7 +336,7 @@ function set_up_2_player_duel()
     -- gandalf
     wizard.setPosition(blue_draw)
     wizard.setRotation(Vector(0,0,180))
-    for i = 1, 9 do
+    for i = 1, 13 do
         wizard.putObject(elf.takeObject())
     end
     for i = 1, 2 do
@@ -351,7 +354,7 @@ function set_up_2_player_duel()
     if include_promo == "true" then wizard.putObject(promo.takeObject()) else trash.putObject(promo.takeObject()) end   
     if include_promo == "true" then wizard.putObject(promo.takeObject()) else trash.putObject(promo.takeObject()) end   
     wizard.randomize()
-    wizard.deal(4, "Blue")
+    wizard.deal(4, "Green")
     aragorn_ring.setPosition(aragorn_ring_pos)
     trash.putObject(frodo_ring) 
 
@@ -364,32 +367,40 @@ function set_up_2_player_duel()
 
     -- paths
     path9.randomize()
+    path9.setPosition(Vector(-50, 1 ,0))
     path9.setPosition(path_pos)
     path8.randomize()
+    path8.setPosition(Vector(-50, 1 ,0))
     for i = 1, 3 do
         path8.takeObject({ position = path_pos + Vector(0, 1, 0), smooth = true })
     end
     path7.randomize()
+    path7.setPosition(Vector(-50, 1 ,0))
     for i = 1, 3 do 
         path7.takeObject({ position = path_pos + Vector(0, 2, 0), smooth = true })
     end
     path6.randomize()
+    path6.setPosition(Vector(-50, 1 ,0))
     for i = 1, 3 do 
         path6.takeObject({ position = path_pos + Vector(0, 3, 0), smooth = true })
     end
     path5.randomize()
+    path5.setPosition(Vector(-50, 1 ,0))
     for i = 1, 3 do 
         path5.takeObject({ position = path_pos + Vector(0, 4, 0), smooth = true })
     end
     path4.randomize()
+    path4.setPosition(Vector(-50, 1 ,0))
     for i = 1, 3 do 
         path4.takeObject({ position = path_pos + Vector(0, 5, 0), smooth = true })
     end
     path3.randomize()
+    path3.setPosition(Vector(-50, 1 ,0))
     for i = 1, 3 do 
         path3.takeObject({ position = path_pos + Vector(0, 6, 0), smooth = true })
     end
     path2.randomize()
+    path2.setPosition(Vector(-50, 1 ,0))
     for i = 1, 3 do 
         path2.takeObject({ position = path_pos + Vector(0, 7, 0), smooth = true })
     end
@@ -438,7 +449,7 @@ function set_up_3_player_duel()
     -- gandalf
     wizard.setPosition(blue_draw)
     wizard.setRotation(Vector(0,0,180))
-    for i = 1, 9 do
+    for i = 1, 13 do
         wizard.putObject(elf.takeObject())
     end
     for i = 1, 2 do
@@ -456,7 +467,7 @@ function set_up_3_player_duel()
     if include_promo == "true" then wizard.putObject(promo.takeObject())  else trash.putObject(promo.takeObject()) end   
     if include_promo == "true" then wizard.putObject(promo.takeObject())  else trash.putObject(promo.takeObject()) end   
     wizard.randomize()
-    wizard.deal(6, "Blue")
+    wizard.deal(6, "Green")
     aragorn_ring.setPosition(aragorn_ring_pos)
     trash.putObject(frodo_ring) 
 
@@ -469,32 +480,40 @@ function set_up_3_player_duel()
 
     -- paths
     path9.randomize()
+    path9.setPosition(Vector(-50, 1 ,0))
     path9.setPosition(path_pos)
     path8.randomize()
+    path8.setPosition(Vector(-50, 1 ,0))
     for i = 1, 3 do
         path8.takeObject({ position = path_pos + Vector(0, 1, 0), smooth = true })
     end
     path7.randomize()
+    path7.setPosition(Vector(-50, 1 ,0))
     for i = 1, 3 do 
         path7.takeObject({ position = path_pos + Vector(0, 2, 0), smooth = true })
     end
     path6.randomize()
+    path6.setPosition(Vector(-50, 1 ,0))
     for i = 1, 3 do 
         path6.takeObject({ position = path_pos + Vector(0, 3, 0), smooth = true })
     end
     path5.randomize()
+    path5.setPosition(Vector(-50, 1 ,0))
     for i = 1, 3 do 
         path5.takeObject({ position = path_pos + Vector(0, 4, 0), smooth = true })
     end
     path4.randomize()
+    path4.setPosition(Vector(-50, 1 ,0))
     for i = 1, 3 do 
         path4.takeObject({ position = path_pos + Vector(0, 5, 0), smooth = true })
     end
     path3.randomize()
+    path3.setPosition(Vector(-50, 1 ,0))
     for i = 1, 3 do 
         path3.takeObject({ position = path_pos + Vector(0, 6, 0), smooth = true })
     end
     path2.randomize()
+    path2.setPosition(Vector(-50, 1 ,0))
     for i = 1, 3 do 
         path2.takeObject({ position = path_pos + Vector(0, 7, 0), smooth = true })
     end
@@ -629,7 +648,7 @@ function set_up_fellowship()
 
     wizard.randomize()
 
-    wizard.deal(7, "Blue")
+    wizard.deal(7, "Green")
 
     trash.putObject(frodo_ring)
     trash.putObject(aragorn_ring)
@@ -652,18 +671,22 @@ function set_up_fellowship()
     -- paths
     path6.takeObject({ guid = amon_hen_card_guid, position = fellowship_path_pos + Vector(0, 1, 0), smooth = true})
     path5.randomize()
+    path5.setPosition(Vector(-50, 1 ,0))
     for i = 1, 3 do
         path5.takeObject({position = fellowship_path_pos + Vector(0, 2, 0), smooth = true})
     end
     path4.randomize()
+    path4.setPosition(Vector(-50, 1 ,0))
     for i = 1, 3 do
         path4.takeObject({position = fellowship_path_pos + Vector(0, 3, 0), smooth = true})
     end
+    path3.setPosition(Vector(-50, 1 ,0))
     trash.putObject(path3.takeObject({ guid = council_of_elrond_card_guid}))
     path3.randomize()
     for i = 1, 2 do
         path3.takeObject({position = fellowship_path_pos + Vector(0, 4, 0), smooth = true})
     end
+    path2.setPosition(Vector(-50, 1 ,0))
     trash.putObject(path2.takeObject({ guid = weathertop_card_guid}))
     path2.randomize()
     for i = 1, 2 do
