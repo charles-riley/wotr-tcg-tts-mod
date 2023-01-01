@@ -1,3 +1,10 @@
+-- scoreboard
+scoreboard_text = "0272bc"
+
+-- scoring areas
+free_peoples_scoring_area = "ed3b24"
+shadow_scoring_area = "e68cea"
+
 -- decks
 promo = getObjectFromGUID("ca1c89")
 southron = getObjectFromGUID("de4160")
@@ -29,27 +36,59 @@ turn_tracker = getObjectFromGUID("56494f")
 turn_tracker_token = getObjectFromGUID("7e74fe")
 first_player_token = getObjectFromGUID("fbb784")
 -- paths
+-- 9
+orodruin_card_guid = "54df4a"
+crack_of_doom_card_guid = "25d931"
+morgai_card_guid = "d53b7e"
+-- 8
+shelobs_lair_card_guid = "70c8d0"
+cirith_ungol_card_guid = "36908a"
+morgul_vale_card_guid = "9aca51"
+-- 7
+henneth_annun_card_guid = "90d4b6"
+osgiliath_card_guid = "a1df35"
+the_cross_roads_card_guid = "b5eb08"
 -- 6
 amon_hen_card_guid = "669e8b"
+dead_marshes_card_guid = "e9ff3d"
+emyn_muil_card_guid = "a0b661"
 -- 5
 egladil_card_guid = "7f42f3"
 dimrill_dale_card_guid = "52a02d"
+lothlorien_card_guid = "fcc50f"
+-- 4
+the_doors_of_durin_card_guid = "f5c40e"
+khazad_dum_card_guid = "1555db"
+caradhras_card_guid = "795b55"
 -- 3
 council_of_elrond_card_guid = "e02d69"
+fords_of_bruinen_card_guid = "4dc5f1"
+imladris_card_guid = "10b425"
 -- 2
 weathertop_card_guid = "2adbc5"
+the_old_forest_card_guid = "dfb10d"
+inn_of_the_prancing_pony_card_guid = "4e1eca"
 -- 1
 bag_end_card_guid = "bd3611"
+bucklebury_ferry_card_guid = "cfd488"
+gildors_encampent_card_guid = "10d61e"
 -- battlegrounds
 free_peoples_battlegrounds_deck = getObjectFromGUID("4901f5")
+edoras_card_guid = "ad8dac"
 lorien_card_guid = "9f9228"
 rivendell_card_guid = "b9d04e"
+helms_deep_card_guid = "ede38d"
+dol_amroth_card_guid = "96ca87"
+minas_tirith_card_guid = "ebb9ac"
+pelagir_card_guid = "ca9c0a"
 shadow_battlegrounds_deck = getObjectFromGUID("a5c0cc")
 moria_card_guid = "d8e084"
 dol_guldur_card_guid = "4e536e"
 minas_morgul_card_guid = "8fbfd0"
 orthanc_card_guid = "8a4b2e"
 morannon_card_guid = "6517fe"
+harad_card_guid = "3075a5"
+umbar_card_guid = "496a36"
 -- dunedain
 blade_of_westernesse_card_guid = "0ce7a3"
 boromir_card_guid = "d53878"
@@ -186,7 +225,9 @@ function setUpGame()
 
     if scenario == "Fellowship" then set_up_fellowship() end
     
-    destroyObject(self)
+    -- destroyObject(self)
+    self.setPosition({0.00, -5.00, 0.00})
+    self.setRotation({0.00, 0.00, 180.00})
 end
 
 function set_up_trilogy()
@@ -702,4 +743,158 @@ function set_up_fellowship()
     trash.putObject(path8)
     trash.putObject(path7)
     trash.putObject(path6)
+end
+
+-- scoring areas
+function onObjectEnterZone(zone, object)
+    update_scores()
+end
+
+function onObjectLeaveZone(zone, object)
+    update_scores()
+end
+
+function update_scores()
+    
+    local free_peoples_sum = 0
+    for foo, occupyingObject in ipairs(getObjectFromGUID(free_peoples_scoring_area).getObjects(true)) do
+        -- print(foo)
+        -- print(occupyingObject.type)
+        if occupyingObject.type == "Card" then
+            -- occupyingObject.highlightOn('Red')
+            -- print(occupyingObject.guid)
+            free_peoples_sum = free_peoples_sum + battle_ground_points(occupyingObject.guid)
+            free_peoples_sum = free_peoples_sum + path_points(occupyingObject.guid)
+            -- print(free_peoples_sum)
+        end
+
+        if occupyingObject.type == "Deck" then
+            for idx, obj in ipairs(occupyingObject.getObjects(true)) do
+                free_peoples_sum = free_peoples_sum + battle_ground_points(obj.guid)
+                free_peoples_sum = free_peoples_sum + path_points(obj.guid)
+            end
+        end
+
+        -- rings
+        if scenario == "Trilogy" then
+            -- if occupyingObject.guid == "3ea385" then
+            --     shadow_sum = shadow_sum +1
+            -- end
+            -- if occupyingObject.guid == "b47492" then
+            --     shadow_sum = shadow_sum +1
+            -- end
+            if occupyingObject.guid == "b5aa21" then
+                free_peoples_sum = free_peoples_sum +1
+            end
+            if occupyingObject.guid == "076e4f" then
+                free_peoples_sum = free_peoples_sum +1
+            end
+        end
+        -- print("Object " .. occupyingObject.guid .. " entered zone " .. zone.guid)
+    end
+
+    shadow_sum = 0
+    for foo, occupyingObject in ipairs(getObjectFromGUID(shadow_scoring_area).getObjects(true)) do
+        -- print(foo)
+        -- print(occupyingObject.type)
+        if occupyingObject.type == "Card" then
+            -- occupyingObject.highlightOn('Red')
+            -- print(occupyingObject.guid)
+            shadow_sum = shadow_sum + battle_ground_points(occupyingObject.guid)
+            -- shadow_sum = shadow_sum + path_points(occupyingObject.guid)
+            -- print(shadow_sum)
+        end
+
+        if occupyingObject.type == "Deck" then
+            for idx, obj in ipairs(occupyingObject.getObjects(true)) do
+                shadow_sum = shadow_sum + battle_ground_points(obj.guid)
+                -- shadow_sum = shadow_sum + path_points(occupyingObject.guid)
+            end
+        end
+
+        if occupyingObject.hasTag("corruption") then
+            shadow_sum = shadow_sum + 1
+        end
+
+        -- rings
+        if scenario == "Trilogy" or scenario == "3 Player Duel" then
+            if occupyingObject.guid == "3ea385" then
+                shadow_sum = shadow_sum +1
+            end
+            if occupyingObject.guid == "b47492" then
+                shadow_sum = shadow_sum +1
+            end
+            -- if occupyingObject.guid == "b5aa21" then
+            --     shadow_sum = shadow_sum +1
+            -- end
+            -- if occupyingObject.guid == "076e4f" then
+            --     shadow_sum = shadow_sum +1
+            -- end
+        end
+    end
+
+    local scoreboard = getObjectFromGUID(scoreboard_text)
+    -- print(scoreboard.getValue())
+    scoreboard.setValue("Score:\nShadow - " .. shadow_sum .. "\n" .. "Free Peoples - " .. free_peoples_sum)
+end
+
+function battle_ground_points(card_guid) 
+
+    if card_guid == edoras_card_guid then return 1 end
+    if card_guid == lorien_card_guid then return 2 end
+    if card_guid == rivendell_card_guid then return 2 end
+    if card_guid == helms_deep_card_guid then return 2 end
+    if card_guid == dol_amroth_card_guid then return 1 end
+    if card_guid == minas_tirith_card_guid then return 3 end
+    if card_guid == pelagir_card_guid then return 1 end
+
+    if card_guid == moria_card_guid then return 1 end
+    if card_guid == dol_guldur_card_guid then return 1 end
+    if card_guid == minas_morgul_card_guid then return 2 end
+    if card_guid == orthanc_card_guid then return 2 end
+    if card_guid == morannon_card_guid then return 2 end
+    if card_guid == harad_card_guid then return 1 end
+    if card_guid == umbar_card_guid then return 1 end
+    return 0
+end
+
+function path_points(card_guid)
+    -- 9
+    if card_guid == orodruin_card_guid then return 3 end
+    if card_guid == crack_of_doom_card_guid then return 3 end
+    if card_guid == morgai_card_guid then return 3 end
+    -- 8
+    if card_guid == shelobs_lair_card_guid then return 2 end
+    if card_guid == cirith_ungol_card_guid then return 2 end
+    if card_guid == morgul_vale_card_guid then return 2 end
+    -- 7
+    if card_guid == henneth_annun_card_guid then return 1 end
+    if card_guid == osgiliath_card_guid then return 1 end
+    if card_guid == the_cross_roads_card_guid then return 1 end
+    -- 6
+    if card_guid == amon_hen_card_guid then return 2 end
+    if card_guid == dead_marshes_card_guid then return 2 end
+    if card_guid == emyn_muil_card_guid then return 2 end
+    -- 5
+    if card_guid == egladil_card_guid then return 1 end
+    if card_guid == dimrill_dale_card_guid then return 1 end
+    if card_guid == lothlorien_card_guid then return 1 end
+    -- 4
+    if card_guid == the_doors_of_durin_card_guid then return 2 end
+    if card_guid == khazad_dum_card_guid then return 2 end
+    if card_guid == caradhras_card_guid then return 2 end
+    -- 3
+    if card_guid == council_of_elrond_card_guid then return 1 end
+    if card_guid == fords_of_bruinen_card_guid then return 1 end
+    if card_guid == imladris_card_guid then return 1 end
+    -- 2
+    if card_guid == weathertop_card_guid then return 2 end
+    if card_guid == the_old_forest_card_guid then return 2 end
+    if card_guid == inn_of_the_prancing_pony_card_guid then return 2 end
+    -- 1
+    if card_guid == bag_end_card_guid then return 1 end
+    if card_guid == bucklebury_ferry_card_guid then return 1 end
+    if card_guid == gildors_encampent_card_guid then return 1 end
+
+    return 0
 end
