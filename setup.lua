@@ -898,3 +898,7 @@ function path_points(card_guid)
 
     return 0
 end
+
+function deleteSetup()
+    destroyObject(self)
+end
