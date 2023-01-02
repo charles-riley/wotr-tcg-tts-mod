@@ -164,8 +164,11 @@ gorbag_and_shagrat_card_guid = "47e86d"
 black_riders_mount_card_guid = "096f7e"
 fell_beast_card_guid = "201221"
 grishnakh_card_guid = "14fdfc"
--- wizard
-
+-- promo
+ioreth_card_guid = "2326d4"
+ghan_card_guid = "8e049f"
+whip_card_guid = "ef5909"
+gothmog_card_guid = "987c37"
 
 -- rings
 witch_king_ring = getObjectFromGUID("3ea385")
@@ -208,14 +211,29 @@ function setScenario(player, option, id)
     scenario = option
 end
 
-function setIncludePromo(player, option, id)
-    include_promo = option
+function setIncludeGothmog(player, option, id)
+    include_gothmog = option
+end
+
+function setIncludeWhip(player, option, id)
+    include_whip = option
+end
+
+function setIncludeGhan(player, option, id)
+    include_ghan = option
+end
+
+function setIncludeIoreth(player, option, id)
+    include_ioreth = option
 end
 
 function setUpGame()
     if scenario == nil then scenario = "Trilogy" end
 
-    if include_promo == nil then include_promo = self.UI.getAttribute("include_promo", "isOn") end
+    if include_gothmog == nil then include_gothmog = self.UI.getAttribute("include_gothmog", "isOn") end
+    if include_whip == nil then include_whip = self.UI.getAttribute("include_whip", "isOn") end
+    if include_ghan == nil then include_ghan = self.UI.getAttribute("include_ghan", "isOn") end
+    if include_ioreth == nil then include_ioreth = self.UI.getAttribute("include_ioreth", "isOn") end
 
     if scenario == "Trilogy" then set_up_trilogy() end
 
@@ -236,7 +254,7 @@ function set_up_trilogy()
     -- witch king
     mordor.setPosition(brown_draw)
     mordor.setRotation(Vector(0,180,180)) 
-    if include_promo == "true" then mordor.putObject(promo.takeObject()) else trash.putObject(promo.takeObject()) end   
+    if include_gothmog == "true" then mordor.putObject(getObjectFromGUID(gothmog_card_guid)) else trash.putObject(getObjectFromGUID(gothmog_card_guid)) end   
     mordor.randomize()
     mordor.deal(7, "Brown")
     witch_king_ring.setPosition(witch_king_ring_pos)
@@ -250,7 +268,7 @@ function set_up_trilogy()
     for i = 1, 11 do
         isengard.putObject(monstrous.takeObject())
     end
-    if include_promo == "true" then isengard.putObject(promo.takeObject()) else trash.putObject(promo.takeObject()) end   
+    if include_whip == "true" then isengard.putObject(getObjectFromGUID(whip_card_guid)) else trash.putObject(getObjectFromGUID(whip_card_guid)) end
     isengard.randomize()
     isengard.deal(7, "Yellow")
     saruman_ring.setPosition(saruman_ring_pos)
@@ -275,7 +293,7 @@ function set_up_trilogy()
     for i = 1, 10 do
         hobbit.putObject(wizard.takeObject())
     end
-    if include_promo == "true" then hobbit.putObject(promo.takeObject()) else trash.putObject(promo.takeObject()) end   
+    if include_ghan == "true" then hobbit.putObject(getObjectFromGUID(ghan_card_guid)) else trash.putObject(getObjectFromGUID(ghan_card_guid)) end   
     hobbit.randomize()
     hobbit.deal(7, "Teal")
     frodo_ring.setPosition(frodo_ring_pos)
@@ -288,7 +306,7 @@ function set_up_trilogy()
     for i = 1, 9 do
         dunedain.putObject(elf.takeObject())
     end
-    if include_promo == "true" then dunedain.putObject(promo.takeObject()) else trash.putObject(promo.takeObject()) end   
+    if include_ioreth == "true" then dunedain.putObject(getObjectFromGUID(ioreth_card_guid)) else trash.putObject(getObjectFromGUID(ioreth_card_guid)) end   
     dunedain.randomize()
     dunedain.deal(7, "Green")
     aragorn_ring.setPosition(aragorn_ring_pos)
@@ -360,8 +378,8 @@ function set_up_2_player_duel()
     for i =1, 12 do
         mordor.putObject(isengard.takeObject())
     end
-    if include_promo == "true" then mordor.putObject(promo.takeObject()) else trash.putObject(promo.takeObject()) end   
-    if include_promo == "true" then mordor.putObject(promo.takeObject()) else trash.putObject(promo.takeObject()) end   
+    if include_gothmog == "true" then mordor.putObject(getObjectFromGUID(gothmog_card_guid)) else trash.putObject(getObjectFromGUID(gothmog_card_guid)) end   
+    if include_whip == "true" then mordor.putObject(getObjectFromGUID(whip_card_guid)) else trash.putObject(getObjectFromGUID(whip_card_guid)) end   
     mordor.randomize()
     mordor.deal(6, "Brown")
     witch_king_ring.setPosition(witch_king_ring_pos)
@@ -392,8 +410,8 @@ function set_up_2_player_duel()
     for i = 1, 10 do
         wizard.putObject(hobbit.takeObject())
     end
-    if include_promo == "true" then wizard.putObject(promo.takeObject()) else trash.putObject(promo.takeObject()) end   
-    if include_promo == "true" then wizard.putObject(promo.takeObject()) else trash.putObject(promo.takeObject()) end   
+    if include_ghan == "true" then wizard.putObject(getObjectFromGUID(ghan_card_guid)) else trash.putObject(getObjectFromGUID(ghan_card_guid)) end   
+    if include_ioreth == "true" then wizard.putObject(getObjectFromGUID(ioreth_card_guid)) else trash.putObject(getObjectFromGUID(ioreth_card_guid)) end   
     wizard.randomize()
     wizard.deal(4, "Green")
     aragorn_ring.setPosition(aragorn_ring_pos)
@@ -461,7 +479,7 @@ function set_up_3_player_duel()
     -- witch king
     mordor.setPosition(brown_draw)
     mordor.setRotation(Vector(0,180,180)) 
-    if include_promo == "true" then mordor.putObject(promo.takeObject())  else trash.putObject(promo.takeObject()) end   
+    if include_gothmog == "true" then mordor.putObject(getObjectFromGUID(gothmog_card_guid))  else trash.putObject(getObjectFromGUID(gothmog_card_guid)) end   
     mordor.randomize()
     mordor.deal(7, "Brown")
     witch_king_ring.setPosition(witch_king_ring_pos)
@@ -475,7 +493,7 @@ function set_up_3_player_duel()
     for i = 1, 11 do
         isengard.putObject(monstrous.takeObject())
     end
-    if include_promo == "true" then isengard.putObject(promo.takeObject())  else trash.putObject(promo.takeObject())  end   
+    if include_whip == "true" then isengard.putObject(getObjectFromGUID(whip_card_guid))  else trash.putObject(getObjectFromGUID(whip_card_guid))  end   
     isengard.randomize()
     isengard.deal(7, "Yellow")
     saruman_ring.setPosition(saruman_ring_pos)
@@ -505,8 +523,8 @@ function set_up_3_player_duel()
     for i = 1, 10 do
         wizard.putObject(hobbit.takeObject())
     end
-    if include_promo == "true" then wizard.putObject(promo.takeObject())  else trash.putObject(promo.takeObject()) end   
-    if include_promo == "true" then wizard.putObject(promo.takeObject())  else trash.putObject(promo.takeObject()) end   
+    if include_ghan == "true" then wizard.putObject(getObjectFromGUID(ghan_card_guid))  else trash.putObject(getObjectFromGUID(ghan_card_guid)) end   
+    if include_ioreth == "true" then wizard.putObject(getObjectFromGUID(ioreth_card_guid))  else trash.putObject(getObjectFromGUID(ioreth_card_guid)) end   
     wizard.randomize()
     wizard.deal(6, "Green")
     aragorn_ring.setPosition(aragorn_ring_pos)
@@ -585,8 +603,8 @@ function set_up_fellowship()
     trash.putObject(gollum)
     monstrous.setPosition(brown_draw)
     monstrous.setRotation(Vector(0,180,180))
-    if include_promo == "true" then monstrous.putObject(promo.takeObject()) else trash.putObject(promo.takeObject()) end   
-    if include_promo == "true" then monstrous.putObject(promo.takeObject()) else trash.putObject(promo.takeObject()) end   
+    if include_gothmog == "true" then monstrous.putObject(getObjectFromGUID(gothmog_card_guid)) else trash.putObject(getObjectFromGUID(gothmog_card_guid)) end   
+    if include_whip == "true" then monstrous.putObject(getObjectFromGUID(whip_card_guid)) else trash.putObject(getObjectFromGUID(whip_card_guid)) end   
     local black_breath_card = mordor.takeObject({ guid = black_breath_card_guid })
     monstrous.putObject(black_breath_card)
     local black_riders_mount_card = mordor.takeObject({ guid = black_riders_mount_card_guid})
@@ -663,8 +681,8 @@ function set_up_fellowship()
     trash.putObject(treebeard)
     wizard.setPosition(blue_draw)
     wizard.setRotation(Vector(0,0,180))
-    if include_promo == "true" then wizard.putObject(promo.takeObject()) else trash.putObject(promo.takeObject()) end   
-    if include_promo == "true" then wizard.putObject(promo.takeObject()) else trash.putObject(promo.takeObject()) end   
+    if include_ghan == "true" then wizard.putObject(getObjectFromGUID(ghan_card_guid)) else trash.putObject(getObjectFromGUID(ghan_card_guid)) end   
+    if include_ioreth == "true" then wizard.putObject(getObjectFromGUID(ioreth_card_guid)) else trash.putObject(getObjectFromGUID(ioreth_card_guid)) end   
     local blade_card = dunedain.takeObject({ guid = blade_of_westernesse_card_guid})
     wizard.putObject(blade_card)
     local boromir = dunedain.takeObject({ guid = boromir_card_guid})
